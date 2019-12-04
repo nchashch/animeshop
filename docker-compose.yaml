@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  webserver:
+    image: 'nginx:1.17'
+    ports:
+      - 80:80
+    volumes:
+      - './nginx/default.conf:/etc/nginx/conf.d/default.conf'
+    depends_on:
+      - api
+  api:
+    depends_on:
+      - database
+    ports:
+      - 9000:9000
+    build:
+      context: ./backend
+      args:
+        - BINARY_PATH
+    image: nchashch/animeshop-backend
+    command: /opt/animeshop/animeshop
+    links:
+      - database
+  database:
+    image: 'postgres:11.3'
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
