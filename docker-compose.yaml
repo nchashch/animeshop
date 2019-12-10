@@ -23,8 +23,6 @@ services:
         - BINARY_PATH
     image: animeshop-backend
     command: /opt/animeshop/backend
-    links:
-      - database
   database:
     image: 'postgres:11.3'
     environment:
