@@ -11,8 +11,8 @@ extra-source-files:
 - ChangeLog.md
 
 # Metadata used when publishing your package
-# synopsis:            Short description of your package
-# category:            Web
+synopsis:            A toy webapp written with servant, persistent
+category:            Web
 
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
@@ -49,7 +49,7 @@ executables:
     - animeshop
 
 tests:
-  animeshop-test:
+  backend-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
