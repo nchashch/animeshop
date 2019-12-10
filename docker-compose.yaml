@@ -21,8 +21,8 @@ services:
       context: ./backend
       args:
         - BINARY_PATH
-    image: nchashch/animeshop-backend
-    command: /opt/animeshop/animeshop
+    image: animeshop-backend
+    command: /opt/animeshop/backend
     links:
       - database
   database:

@@ -7,15 +7,16 @@ module API.Internal (
   ) where
 
 import API.Equipment
+import API.EquipmentInstances
 import API.Items
 import Servant
 import Config
 import Control.Monad.Reader (runReaderT)
 
-type AnimeShopAPI = EquipmentAPI :<|> ItemsAPI
+type AnimeShopAPI = EquipmentAPI :<|> ItemsAPI :<|> EquipmentInstancesAPI
 
 animeShopServer :: ServerT AnimeShopAPI App
-animeShopServer = equipmentServer :<|> itemsServer
+animeShopServer = equipmentServer :<|> itemsServer :<|> equipmentInstancesServer
 
 animeShopAPI :: Proxy AnimeShopAPI
 animeShopAPI = Proxy

@@ -38,15 +38,14 @@ ItemInstance json
     deriving Show
 
 -- Is it a refrigerator, a cash registrar, or a lamp? What kind of lamp?
-EquipmentType json
+Equipment json
     name Text
     description Text
     deriving Show
 
-
 -- A piece of equipment
-Equipment json
-    model EquipmentTypeId
+EquipmentInstance json
+    model EquipmentId
     comment Text nullable
     unit UnitId -- At what unit is this piece of equipment?
     location Text -- How do we represent location?
@@ -62,7 +61,7 @@ Unit json
 
 {-
 EquipmentInspectionResult
-    equipment EquipmentId -- What piece of equipment was inspected?
+    equipment EquipmentInstanceId -- What piece of equipment was inspected?
     inspectedAt UTCTime
     inspectedBy EmployeeId
     description Text -- General inspection report
