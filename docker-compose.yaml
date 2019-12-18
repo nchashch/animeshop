@@ -14,10 +14,6 @@ services:
       - api
   api:
     image: nchashch/animeshop-backend
-    build:
-      context: ./backend
-      args:
-        - BINARY_PATH
     command: /opt/animeshop/backend
     depends_on:
       - database
