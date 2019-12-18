@@ -1,18 +1,11 @@
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE DataKinds #-}
-{-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE RankNTypes #-}
-{-# LANGUAGE ScopedTypeVariables #-}
-{-# LANGUAGE TypeOperators #-}
 
 module Main where
 
 import Network.Wai.Handler.Warp
 import Config (Config(..))
 import DB (connectDb, migrateDb)
-
-import API
+import AnimeShop (animeShopApp)
 
 main :: IO ()
 main = do

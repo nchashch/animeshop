@@ -1,8 +1,8 @@
 {-# LANGUAGE DataKinds #-}
 {-# LANGUAGE TypeOperators #-}
-module API.Equipment where
+module AnimeShop.API.Maintenance.Equipment where
 
-import API.Prelude
+import AnimeShop.Prelude
 
 type EquipmentAPI =
   "equipment" :>

@@ -1,4 +1,4 @@
-module API.Prelude (
+module AnimeShop.Prelude (
   module DB,
   module Servant,
   module Data.Aeson,

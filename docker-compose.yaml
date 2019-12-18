@@ -13,7 +13,7 @@ services:
     depends_on:
       - api
   api:
-    image: animeshop-backend
+    image: nchashch/animeshop-backend
     build:
       context: ./backend
       args:

@@ -1,8 +1,8 @@
 {-# LANGUAGE DataKinds #-}
 {-# LANGUAGE TypeOperators #-}
-module API.Items where
+module AnimeShop.API.Stock.Items (ItemsAPI, itemsServer) where
 
-import API.Prelude
+import AnimeShop.Prelude
 
 type ItemsAPI =
   "items" :>

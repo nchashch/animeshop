@@ -19,22 +19,24 @@ type Money = Int
 type Discount = Double
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
--- Unit can be a shop, a warehouse, or some other organizationial "unit"
-
--- Customer App
+Manufacturer json
+    name Text
+    description Text
+    deriving Show
 
 -- List of all available items across all units
 Item json
     name Text
     description Text
-    price Money
-    discount Discount nullable
+    manufacturer ManufacturerId
     deriving Show
 
 -- How much of this item do we have at unit?
 ItemInstance json
     unit UnitId
     amount Int
+    price Money
+    discount Discount nullable
     deriving Show
 
 -- Is it a refrigerator, a cash registrar, or a lamp? What kind of lamp?
@@ -64,11 +66,15 @@ EquipmentInspectionResult
     equipment EquipmentInstanceId -- What piece of equipment was inspected?
     inspectedAt UTCTime
     inspectedBy EmployeeId
+    schedule EquipmentInspectionScheduleID
     description Text -- General inspection report
     deriving Show
 
 -- Planned inspections
 EquipmentInspectionSchedule
+    employeeID EmployeeID
+    equipmenInstanceID EquipmentInstanceID
+    dateTime DateTime
     completed Bool
     deriving Show
 
@@ -77,7 +83,8 @@ Employee
     securityRole SecurityRole -- Determines what access rights this employee has
     deriving Show
 -- What is this employee's schedule? - 9 to 5 5 days a week?
--- EmployeeSchedule
+EmployeeSchedule
+
 -- RepairResult
 
 -- Security
@@ -93,6 +100,6 @@ EmployeeEntry
 TransportEntry
     unit UnitId
     licensePlate Text
-    enteredAt UTCTime -- can be null if employee "didn't enter"
-    exitedAt UTCTime -- can be null if employee "didn't exit"
+    enteredAt UTCTime nullable -- can be null if employee "didn't enter"
+    exitedAt UTCTime nullable -- can be null if employee "didn't exit"
 -}
