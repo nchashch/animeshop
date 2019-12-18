@@ -4,7 +4,6 @@
 module DB.Internal (
   runDb,
   updateBy,
-  migrateDb,
   connectDb
   ) where
 
@@ -14,15 +13,11 @@ import Database.Persist.Postgresql (ConnectionString, createPostgresqlPool)
 import Control.Monad.Reader (ReaderT, MonadReader, asks)
 import Control.Monad.IO.Class (MonadIO, liftIO)
 import Control.Monad.Logger (runStderrLoggingT)
-import DB.Models
 
 import Config
 
 connectDb :: ConnectionString -> IO ConnectionPool
 connectDb connectionString = runStderrLoggingT $ createPostgresqlPool connectionString 1
-
-migrateDb :: ConnectionPool -> IO ()
-migrateDb pool = runSqlPool (runMigration migrateAll) pool
 
 runDb :: (MonadReader Config m, MonadIO m) => SqlPersistT IO b -> m b
 runDb query = do

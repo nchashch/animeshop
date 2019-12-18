@@ -1,11 +1,13 @@
 {-# LANGUAGE DataKinds #-}
 {-# LANGUAGE TypeOperators #-}
-module AnimeShop.Internal ( animeShopApp ) where
+module AnimeShop.Internal ( animeShopApp, migrateDb ) where
 
+import AnimeShop.Models (migrateAll)
 import AnimeShop.API (AnimeShopAPI, animeShopServer)
 import Servant
 import Config
 import Control.Monad.Reader (runReaderT)
+import Database.Persist.Sql (runMigration, runSqlPool, ConnectionPool)
 
 animeShopAPI :: Proxy AnimeShopAPI
 animeShopAPI = Proxy
@@ -26,3 +28,8 @@ convertApp cfg appt = runReaderT (runApp appt) cfg
 -- 'server' function.
 appToServer :: Config -> Server AnimeShopAPI
 appToServer cfg = hoistServer animeShopAPI (convertApp cfg) animeShopServer
+
+
+-- | This function applies migration to the database according to models specified in AnimeShop.Models
+migrateDb :: ConnectionPool -> IO ()
+migrateDb pool = runSqlPool (runMigration migrateAll) pool

@@ -1,7 +1,5 @@
 module DB (
-  module DB.Models,
   module Database.Persist,
-  migrateDb,
   connectDb,
   updateBy,
   runDb
@@ -9,10 +7,8 @@ module DB (
 
 import Database.Persist
 
-import DB.Models
 import DB.Internal (
   connectDb,
-  migrateDb,
   updateBy,
   runDb
   )
