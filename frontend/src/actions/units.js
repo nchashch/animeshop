@@ -16,14 +16,14 @@ function receiveUnits(units) {
   }
 }
 
-export function postUnit(name, address) {
+export function postUnit(unit) {
   return (dispatch) => {
-    const unit = {
-      name,
-      address
-    }
-    return axios
-      .post('https://localhost/api/admin/units', unit)
+    const options =  {
+      url: 'https://localhost/api/admin/units',
+      method: 'POST',
+      data: unit
+    };
+    return axios(options)
       .then(
         res => {
           const unit = res.data;
