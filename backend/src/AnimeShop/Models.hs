@@ -1,3 +1,4 @@
+{-# LANGUAGE DeriveGeneric #-}
 {-# LANGUAGE ExistentialQuantification #-}
 {-# LANGUAGE GADTs #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
@@ -14,6 +15,8 @@ import Database.Persist.TH
 import Data.Text
 import Data.Time
 import Data.ByteString (ByteString)
+import GHC.Generics
+import Data.Aeson
 
 type Money = Int
 type Discount = Double
@@ -98,3 +101,12 @@ TransportEntry json
     enteredAt UTCTime nullable -- can be null if employee "didn't enter"
     exitedAt UTCTime nullable -- can be null if employee "didn't exit"
 |]
+
+data UserCredentials =
+  UserCredentials {
+  email :: Text,
+  password :: Text
+  } deriving (Generic, Show)
+
+instance ToJSON UserCredentials
+instance FromJSON UserCredentials
