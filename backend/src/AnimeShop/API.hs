@@ -6,11 +6,13 @@ import AnimeShop.Prelude
 import AnimeShop.API.Admin
 import AnimeShop.API.Maintenance
 import AnimeShop.API.Stock
+import AnimeShop.API.Security
 
 type AnimeShopAPI =
   AdminAPI :<|>
   MaintenanceAPI :<|>
-  StockAPI
+  StockAPI :<|>
+  SecurityAPI
 
 animeShopServer :: ServerT AnimeShopAPI App
-animeShopServer = adminServer :<|> maintenanceServer :<|> stockServer
+animeShopServer = adminServer :<|> maintenanceServer :<|> stockServer :<|> securityServer

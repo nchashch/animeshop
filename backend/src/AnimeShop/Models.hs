@@ -9,7 +9,6 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 module AnimeShop.Models where
 
-
 import Database.Persist
 import Database.Persist.TH
 import Data.Text
@@ -39,7 +38,6 @@ ItemInstance json
     price Money
     discount Discount nullable
     deriving Show
-
 -- Is it a refrigerator, a cash registrar, or a lamp? What kind of lamp?
 Equipment json
     name Text
@@ -54,7 +52,6 @@ Employee json
 User
     email Text
     passphrase_bcrypt ByteString
-
 
 -- A piece of equipment
 EquipmentInstance json
@@ -87,7 +84,7 @@ Unit json
     address Text
     deriving Show
 
-EmployeeEntry
+EmployeeEntry json
     unit UnitId
     employee EmployeeId
     enteredAt UTCTime nullable -- can be null if employee "didn't enter"
@@ -95,7 +92,7 @@ EmployeeEntry
     deriving Show
 
 -- Not sure if this is neccessary
-TransportEntry
+TransportEntry json
     unit UnitId
     licensePlate Text
     enteredAt UTCTime nullable -- can be null if employee "didn't enter"
