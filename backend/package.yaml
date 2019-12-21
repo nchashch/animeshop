@@ -32,6 +32,8 @@ dependencies:
 - persistent-postgresql
 - monad-logger
 - text
+- bytestring
+- cryptonite
 - mtl
 
 library:
