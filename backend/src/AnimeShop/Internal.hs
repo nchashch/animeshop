@@ -1,3 +1,4 @@
+{-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE DataKinds #-}
 {-# LANGUAGE TypeOperators #-}
 module AnimeShop.Internal ( animeShopApp, migrateDb ) where
@@ -8,6 +9,8 @@ import Servant
 import Config
 import Control.Monad.Reader (runReaderT)
 import Database.Persist.Sql (runMigration, runSqlPool, ConnectionPool)
+import Network.Wai.Middleware.Cors
+import Network.Wai.Middleware.Servant.Options
 
 animeShopAPI :: Proxy AnimeShopAPI
 animeShopAPI = Proxy
@@ -16,7 +19,12 @@ animeShopAPI = Proxy
 -- a 'Config', we return a WAI 'Application' which any WAI compliant server
 -- can run.
 animeShopApp :: Config -> Application
-animeShopApp cfg = serve animeShopAPI (appToServer cfg)
+animeShopApp cfg =
+  cors (const $ Just policy)
+  $ provideOptions animeShopAPI
+  $ serve animeShopAPI (appToServer cfg)
+  where
+    policy = simpleCorsResourcePolicy { corsRequestHeaders = [ "content-type" ] }
 
 -- | This function converts our @'AppT' m@ monad into the @ExceptT ServantErr
 -- m@ monad that Servant's 'enter' function needs in order to run the

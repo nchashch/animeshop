@@ -21,11 +21,13 @@ description:         Please see the README on GitHub
 
 dependencies:
 - base >= 4.7 && < 5
+- servant-options
 - servant-server
 - servant
 - aeson
 - time
 - wai
+- wai-cors
 - warp
 - persistent
 - persistent-template
