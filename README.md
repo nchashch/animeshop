@@ -5,7 +5,8 @@ Deploying this webapp requires `stack`, `yarn`, and `docker` with
 - https://www.docker.com/
 - https://yarnpkg.com/lang/en/
 
-In order to deploy it clone this repository and first run:
+In order to deploy it clone this repository and run:
 ```bash
-./deploy.sh
+./build.sh
+docker-compose up
 ```
