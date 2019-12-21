@@ -14,6 +14,7 @@ import Database.Persist
 import Database.Persist.TH
 import Data.Text
 import Data.Time
+import Data.ByteString (ByteString)
 
 type Money = Int
 type Discount = Double
@@ -45,6 +46,16 @@ Equipment json
     description Text
     deriving Show
 
+Employee json
+    name Text
+    unit UnitId
+    deriving Show
+
+User
+    email Text
+    passphrase_bcrypt ByteString
+
+
 -- A piece of equipment
 EquipmentInstance json
     model EquipmentId
@@ -55,39 +66,26 @@ EquipmentInstance json
     operational Bool
     deriving Show
 
+-- Planned inspections
+EquipmentInspectionSchedule json
+    employee EmployeeId
+    equipmenInstanceId EquipmentInstanceId
+    dateTime UTCTime
+    completed Bool
+    deriving Show
+
+EquipmentInspectionResult json
+    equipmentInstance EquipmentInstanceId -- What piece of equipment was inspected?
+    inspectedAt UTCTime
+    inspectedBy EmployeeId
+    schedule EquipmentInspectionScheduleId
+    description Text -- General inspection report
+    deriving Show
+
 Unit json
     name Text
     address Text
     deriving Show
-|]
-
-{-
-EquipmentInspectionResult
-    equipment EquipmentInstanceId -- What piece of equipment was inspected?
-    inspectedAt UTCTime
-    inspectedBy EmployeeId
-    schedule EquipmentInspectionScheduleID
-    description Text -- General inspection report
-    deriving Show
-
--- Planned inspections
-EquipmentInspectionSchedule
-    employeeID EmployeeID
-    equipmenInstanceID EquipmentInstanceID
-    dateTime DateTime
-    completed Bool
-    deriving Show
-
-Employee
-    name String
-    securityRole SecurityRole -- Determines what access rights this employee has
-    deriving Show
--- What is this employee's schedule? - 9 to 5 5 days a week?
-EmployeeSchedule
-
--- RepairResult
-
--- Security
 
 EmployeeEntry
     unit UnitId
@@ -102,4 +100,4 @@ TransportEntry
     licensePlate Text
     enteredAt UTCTime nullable -- can be null if employee "didn't enter"
     exitedAt UTCTime nullable -- can be null if employee "didn't exit"
--}
+|]
