@@ -69,13 +69,12 @@ EquipmentInstance json
 -- Planned inspections
 EquipmentInspectionSchedule json
     employee EmployeeId
-    equipmenInstanceId EquipmentInstanceId
+    equipmentInstance EquipmentInstanceId
     dateTime UTCTime
     completed Bool
     deriving Show
 
 EquipmentInspectionResult json
-    equipmentInstance EquipmentInstanceId -- What piece of equipment was inspected?
     inspectedAt UTCTime
     inspectedBy EmployeeId
     schedule EquipmentInspectionScheduleId
