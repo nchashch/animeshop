@@ -36,6 +36,7 @@ Item json
 
 -- How much of this item do we have at unit?
 ItemInstance json
+    item ItemId
     unit UnitId
     amount Int
     price Money
