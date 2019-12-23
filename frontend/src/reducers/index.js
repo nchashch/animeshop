@@ -9,6 +9,7 @@ import { transportEntries } from './security/transportEntries';
 import { equipment } from './maintenance/equipment';
 import { equipmentInstances } from './maintenance/equipmentInstances';
 import { equipmentInspectionSchedules } from './maintenance/equipmentInspectionSchedules';
+import { equipmentInspectionResults } from './maintenance/equipmentInspectionResults';
 
 const rootReducer = combineReducers({
   units,
@@ -20,7 +21,8 @@ const rootReducer = combineReducers({
   transportEntries,
   equipment,
   equipmentInstances,
-  equipmentInspectionSchedules
+  equipmentInspectionSchedules,
+  equipmentInspectionResults
 });
 
 export default rootReducer;
