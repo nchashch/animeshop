@@ -11,6 +11,7 @@ export default function EmployeesList() {
   const employeesTrs = employees.map(
     employee =>
     <tr key={employee.id}>
+      <td>{employee.id}</td>
       <td>{employee.name}</td>
       <td>{employee.unit}</td>
       <td><button onClick={() => dispatch(deleteEmployee(employee.id))}>Delete</button></td>
@@ -21,6 +22,7 @@ export default function EmployeesList() {
       <table width="100%">
         <thead>
         <tr>
+          <th>Id</th>
           <th>Name</th>
           <th>Unit</th>
         </tr>

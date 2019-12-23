@@ -11,6 +11,7 @@ export default function UnitsList() {
   const unitsTrs = units.map(
     unit =>
     <tr key={unit.id}>
+      <td>{unit.id}</td>
       <td>{unit.name}</td>
       <td>{unit.address}</td>
       <td><button onClick={() => dispatch(deleteUnit(unit.id))}>Delete</button></td>
@@ -21,6 +22,7 @@ export default function UnitsList() {
       <table width="100%">
         <thead>
         <tr>
+          <th>Id</th>
           <th>Name</th>
           <th>Address</th>
         </tr>
