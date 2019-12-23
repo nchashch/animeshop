@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchManufacturers, deleteManufacturer } from '../../../actions/manufacturers';
+import { fetchManufacturers, deleteManufacturer } from '../../../actions/stock/manufacturers';
 
 export default function ManufacturersList() {
   const dispatch = useDispatch();

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { ADD_EMPLOYEE, GET_EMPLOYEES, DELETE_EMPLOYEE } from './types';
+import { ADD_EMPLOYEE, GET_EMPLOYEES, DELETE_EMPLOYEE } from '../types';
 
 function addEmployee(employee) {
   return {

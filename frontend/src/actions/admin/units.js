@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { ADD_UNIT, GET_UNITS, DELETE_UNIT } from './types';
+import { ADD_UNIT, GET_UNITS, DELETE_UNIT } from '../types';
 
 function addUnit(unit) {
   return {

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { ADD_MANUFACTURER, GET_MANUFACTURERS, DELETE_MANUFACTURER } from './types';
+import { ADD_MANUFACTURER, GET_MANUFACTURERS, DELETE_MANUFACTURER } from '../types';
 
 function addManufacturer(manufacturer) {
   return {

@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { postEmployee } from '../../../actions/employees';
-import { fetchUnits } from '../../../actions/units';
+import { postEmployee } from '../../../actions/admin/employees';
+import { fetchUnits } from '../../../actions/admin/units';
 import useForm from 'react-hook-form';
 
 export default function EmployeeForm() {
