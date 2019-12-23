@@ -10,7 +10,8 @@ import {
 import {Design} from './Pages/Design'
 import {Admin} from './Pages/Admin'
 import {Maintenance} from './Pages/Maintenance'
-import {StockSecurity} from './Pages/StockSecurity'
+import {Stock} from './Pages/Stock'
+import {Security} from './Pages/Security'
 import {About} from './Pages/About'
 
 function App() {
@@ -29,7 +30,10 @@ function App() {
             <Link to="/maintenance">Maintenance</Link>
           </li>
           <li>
-            <Link to="/stockSecurity">StockSecurity</Link>
+            <Link to="/stock">Stock</Link>
+          </li>
+          <li>
+            <Link to="/security">Security</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
@@ -55,8 +59,11 @@ function App() {
           <Route path="/maintenance">
             <Maintenance />
           </Route>
-          <Route path="/stockSecurity">
-            <StockSecurity />
+          <Route path="/stock">
+            <Stock />
+          </Route>
+          <Route path="/security">
+            <Security />
           </Route>
           <Route path="/about">
             <About />
@@ -68,20 +75,5 @@ function App() {
   );
 }
 
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
-  );
-}
 
 export default App;

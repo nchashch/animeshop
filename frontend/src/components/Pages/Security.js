@@ -1,6 +1,6 @@
 import React from "react";
 
-export function StockSecurity() {
+export function Security() {
     return (
       <div>
         <h2>Безопастность</h2>
