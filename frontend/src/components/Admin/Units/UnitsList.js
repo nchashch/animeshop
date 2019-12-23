@@ -19,6 +19,7 @@ export default function UnitsList() {
   );
   return (
     <Fragment>
+      <h2>Units</h2>
       <table width="100%">
         <thead>
         <tr>

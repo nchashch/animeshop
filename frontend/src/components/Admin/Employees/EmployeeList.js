@@ -19,6 +19,7 @@ export default function EmployeesList() {
   );
   return (
     <Fragment>
+      <h2>Employees</h2>
       <table width="100%">
         <thead>
         <tr>
