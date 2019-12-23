@@ -9,6 +9,7 @@ export default function ManufacturerForm() {
   const onSubmit = values => dispatch(postManufacturer(values));
   return (
     <Fragment>
+      <h2>Add manufacturer</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label>Name: </label>
         <input name="name" ref={register}></input><br/>

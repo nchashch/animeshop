@@ -20,6 +20,7 @@ export default function ManufacturersList() {
   );
   return (
     <Fragment>
+      <h2>manufacturers</h2>
       <table width="100%">
         <thead>
         <tr>
