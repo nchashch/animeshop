@@ -2,21 +2,21 @@ import axios from 'axios';
 
 import { ADD_EQUIPMENT_INSPECTION_SCHEDULE, GET_EQUIPMENT_INSPECTION_SCHEDULES, DELETE_EQUIPMENT_INSPECTION_SCHEDULE } from '../types';
 
-function addEquipmentInstance(equipmentInspectionSchedule) {
+function addEquipmentInspectionSchedule(equipmentInspectionSchedule) {
   return {
     type: ADD_EQUIPMENT_INSPECTION_SCHEDULE,
     equipmentInspectionSchedule
   }
 }
 
-function receiveEquipmentInstances(equipmentInspectionSchedules) {
+function receiveEquipmentInspectionSchedules(equipmentInspectionSchedules) {
   return {
     type: GET_EQUIPMENT_INSPECTION_SCHEDULES,
     equipmentInspectionSchedules
   }
 }
 
-export function postEquipmentInstance(equipmentInspectionSchedule) {
+export function postEquipmentInspectionSchedule(equipmentInspectionSchedule) {
   return (dispatch) => {
     const options =  {
       url: 'https://localhost/api/maintenance/equipment_inspection_schedules',
@@ -27,7 +27,7 @@ export function postEquipmentInstance(equipmentInspectionSchedule) {
       .then(
         res => {
           const equipmentInspectionSchedule = res.data;
-          dispatch(addEquipmentInstance(equipmentInspectionSchedule));
+          dispatch(addEquipmentInspectionSchedule(equipmentInspectionSchedule));
         },
         err => {
           console.log(err);
@@ -36,14 +36,14 @@ export function postEquipmentInstance(equipmentInspectionSchedule) {
   }
 }
 
-export function fetchEquipmentInstances() {
+export function fetchEquipmentInspectionSchedules() {
   return (dispatch) => {
     return axios
       .get('https://localhost/api/maintenance/equipment_inspection_schedules')
       .then(
         res => {
           const equipmentInspectionSchedules = res.data;
-          dispatch(receiveEquipmentInstances(equipmentInspectionSchedules));
+          dispatch(receiveEquipmentInspectionSchedules(equipmentInspectionSchedules));
         },
         err => {
           console.log(err);
@@ -52,7 +52,7 @@ export function fetchEquipmentInstances() {
   }
 }
 
-export function deleteEquipmentInstance(id) {
+export function deleteEquipmentInspectionSchedule(id) {
   return (dispatch) => {
     const options =  {
       url: 'https://localhost/api/maintenance/equipment_inspection_schedules',
