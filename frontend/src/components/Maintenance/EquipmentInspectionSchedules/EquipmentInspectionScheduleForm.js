@@ -40,7 +40,7 @@ export default function EquipmentInspectionScheduleForm() {
   );
   return (
     <Fragment>
-      <h2>Add equipment inspectionSchedule</h2>
+      <h2>Add equipment inspection schedule</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label>DateTime: </label>
         <input name="installedAt" type="datetime-local" ref={register}></input><br/>
