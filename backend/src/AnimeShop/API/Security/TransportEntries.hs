@@ -5,7 +5,7 @@ module AnimeShop.API.Security.TransportEntries where
 import AnimeShop.Prelude
 
 type TransportEntriesAPI =
-  "employee_entries" :>
+  "transport_entries" :>
   (
     Get '[JSON] [Entity TransportEntry] :<|>
     ReqBody '[JSON] TransportEntry :> Post '[JSON] (Entity TransportEntry) :<|>
