@@ -1,4 +1,4 @@
-import { ADD_EMPLOYEE, GET_EMPLOYEES, DELETE_EMPLOYEE } from '../actions/types';
+import { ADD_EMPLOYEE, GET_EMPLOYEES, DELETE_EMPLOYEE } from '../../actions/types';
 
 export function employees(state = [], action) {
   switch (action.type) {

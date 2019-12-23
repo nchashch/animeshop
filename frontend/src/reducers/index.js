@@ -1,12 +1,14 @@
 import { combineReducers } from 'redux';
-import { units } from './units';
-import { employees } from './employees';
-import { manufacturers } from './manufacturers';
+import { units } from './admin/units';
+import { employees } from './admin/employees';
+import { manufacturers } from './stock/manufacturers';
+import { items } from './stock/items';
 
 const rootReducer = combineReducers({
   units,
   employees,
-  manufacturers
+  manufacturers,
+  items
 });
 
 export default rootReducer;

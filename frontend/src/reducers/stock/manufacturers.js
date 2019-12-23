@@ -1,4 +1,4 @@
-import { ADD_MANUFACTURER, GET_MANUFACTURERS, DELETE_MANUFACTURER } from '../actions/types';
+import { ADD_MANUFACTURER, GET_MANUFACTURERS, DELETE_MANUFACTURER } from '../../actions/types';
 
 export function manufacturers(state = [], action) {
   switch (action.type) {

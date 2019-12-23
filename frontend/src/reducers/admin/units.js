@@ -1,4 +1,4 @@
-import { ADD_UNIT, GET_UNITS, DELETE_UNIT } from '../actions/types';
+import { ADD_UNIT, GET_UNITS, DELETE_UNIT } from '../../actions/types';
 
 export function units(state = [], action) {
   switch (action.type) {
