@@ -1,4 +1,4 @@
-import { ADD_UNIT, GET_UNITS } from '../actions/types';
+import { ADD_UNIT, GET_UNITS, DELETE_UNIT, PATCH_UNIT } from '../actions/types';
 
 export function units(state = [], action) {
   switch (action.type) {
@@ -6,6 +6,8 @@ export function units(state = [], action) {
       return [ ...state, action.unit];
     case GET_UNITS:
       return action.units;
+    case DELETE_UNIT:
+      return state.filter(unit => unit.id !== action.id);
     default:
       return state;
   }

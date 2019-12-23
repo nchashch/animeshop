@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { ADD_UNIT, GET_UNITS  } from './types';
+import { ADD_UNIT, GET_UNITS, DELETE_UNIT, PATCH_UNIT  } from './types';
 
 function addUnit(unit) {
   return {
@@ -49,5 +49,26 @@ export function fetchUnits() {
           console.log(err);
         }
       );
+  }
+}
+
+export function deleteUnit(id) {
+  return (dispatch) => {
+    const options =  {
+      url: 'https://localhost/api/admin/units',
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      },
+      data: id
+    };
+    return axios(options)
+      .then(res => {
+        const action = {
+          type: DELETE_UNIT,
+          id
+        };
+        dispatch(action);
+      })
   }
 }
