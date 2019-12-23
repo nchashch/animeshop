@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { useDispatch } from 'react-redux';
-import { postUnit } from '../actions/units';
+import { postUnit } from '../../../actions/units';
 import useForm from 'react-hook-form';
 
 export default function UnitForm() {

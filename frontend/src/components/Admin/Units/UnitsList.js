@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchUnits, deleteUnit } from '../actions/units';
+import { fetchUnits, deleteUnit } from '../../../actions/units';
 
 export default function UnitsList() {
   const dispatch = useDispatch();

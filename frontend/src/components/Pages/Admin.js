@@ -1,6 +1,6 @@
 import React from "react";
-import Units from '../Units';
-import Employees from "../Employees";
+import Units from '../Admin/Units';
+import Employees from "../Admin/Employees";
 
 export function Admin() {
     return (
