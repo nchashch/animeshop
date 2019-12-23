@@ -19,7 +19,7 @@ function receiveEquipmentInstances(equipmentInstances) {
 export function postEquipmentInstance(equipmentInstance) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/admin/equipment_instances',
+      url: 'https://localhost/api/maintenance/equipment_instances',
       method: 'POST',
       data: equipmentInstance
     };
@@ -39,7 +39,7 @@ export function postEquipmentInstance(equipmentInstance) {
 export function fetchEquipmentInstances() {
   return (dispatch) => {
     return axios
-      .get('https://localhost/api/admin/equipment_instances')
+      .get('https://localhost/api/maintenance/equipment_instances')
       .then(
         res => {
           const equipmentInstances = res.data;
@@ -55,7 +55,7 @@ export function fetchEquipmentInstances() {
 export function deleteEquipmentInstance(id) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/admin/equipment_instances',
+      url: 'https://localhost/api/maintenance/equipment_instances',
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'

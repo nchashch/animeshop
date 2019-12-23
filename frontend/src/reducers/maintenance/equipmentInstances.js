@@ -5,7 +5,7 @@ export function equipmentInstances(state = [], action) {
     case ADD_EQUIPMENT_INSTANCE:
       return [ ...state, action.equipmentInstance];
     case GET_EQUIPMENT_INSTANCES:
-      return action.equipmentInstance;
+      return action.equipmentInstances;
     case DELETE_EQUIPMENT_INSTANCE:
       return state.filter(equipmentInstance => equipmentInstance.id !== action.id);
     default:
