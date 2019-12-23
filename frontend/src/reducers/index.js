@@ -7,6 +7,7 @@ import { itemInstances } from './stock/itemInstances';
 import { employeeEntries } from './security/employeeEntries';
 import { transportEntries } from './security/transportEntries';
 import { equipment } from './maintenance/equipment';
+import { equipmentInstances } from './maintenance/equipmentInstances';
 
 const rootReducer = combineReducers({
   units,
@@ -16,7 +17,8 @@ const rootReducer = combineReducers({
   itemInstances,
   employeeEntries,
   transportEntries,
-  equipment
+  equipment,
+  equipmentInstances
 });
 
 export default rootReducer;
