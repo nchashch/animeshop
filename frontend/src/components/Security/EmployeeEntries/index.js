@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
-//import EmployeeEntryForm from './EmployeeEntryForm';
+import EmployeeEntryForm from './EmployeeEntryForm';
 import EmployeeEntriesList from './EmployeeEntriesList';
 
 export default function EmployeeEntries() {
   return (
     <Fragment>
+      <EmployeeEntryForm/>
       <EmployeeEntriesList/>
     </Fragment>
   );
