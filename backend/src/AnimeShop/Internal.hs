@@ -24,7 +24,7 @@ animeShopApp cfg =
   $ provideOptions animeShopAPI
   $ serve animeShopAPI (appToServer cfg)
   where
-    policy = simpleCorsResourcePolicy { corsRequestHeaders = [ "content-type" ] }
+    policy = simpleCorsResourcePolicy { corsRequestHeaders = [ "content-type" ], corsMethods = [ "OPTIONS", "POST", "GET", "PATCH", "DELETE" ] }
 
 -- | This function converts our @'AppT' m@ monad into the @ExceptT ServantErr
 -- m@ monad that Servant's 'enter' function needs in order to run the
