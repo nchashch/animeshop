@@ -1,12 +1,10 @@
 import { combineReducers } from 'redux';
 import { units } from './units';
-
-export const initialState = {
-  units: []
-}
+import { employees } from './employees';
 
 const rootReducer = combineReducers({
-  units
+  units,
+  employees
 });
 
 export default rootReducer;

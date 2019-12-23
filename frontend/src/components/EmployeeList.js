@@ -1,10 +1,10 @@
 import React, { Fragment, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchEmployees } from '../actions/employees';
+import { fetchEmployees, deleteEmployee } from '../actions/employees';
 
 export default function EmployeesList() {
   const dispatch = useDispatch();
-  const employees = useSelector(state => state.units);
+  const employees = useSelector(state => state.employees);
   useEffect(() => {
     dispatch(fetchEmployees());
   }, [dispatch]);
@@ -13,6 +13,7 @@ export default function EmployeesList() {
     <tr key={employee.id}>
       <td>{employee.name}</td>
       <td>{employee.unit}</td>
+      <td><button onClick={() => dispatch(deleteEmployee(employee.id))}>Delete</button></td>
     </tr>
   );
   return (

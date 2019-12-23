@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { ADD_EMPLOYEE, GET_EMPLOYEES  } from './types';
+import { ADD_EMPLOYEE, GET_EMPLOYEES, DELETE_EMPLOYEE } from './types';
 
 function addEmployee(employee) {
   return {
@@ -49,5 +49,26 @@ export function fetchEmployees() {
           console.log(err);
         }
       );
+  }
+}
+
+export function deleteEmployee(id) {
+  return (dispatch) => {
+    const options =  {
+      url: 'https://localhost/api/admin/employees',
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      },
+      data: id
+    };
+    return axios(options)
+      .then(res => {
+        const action = {
+          type: DELETE_EMPLOYEE,
+          id
+        };
+        dispatch(action);
+      })
   }
 }
