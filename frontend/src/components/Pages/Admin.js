@@ -6,7 +6,7 @@ export function Admin() {
     return (
       <div>
         <Employees/>
-        <Units />
+        <Units/>
       </div>
     );
   }

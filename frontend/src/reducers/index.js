@@ -4,13 +4,15 @@ import { employees } from './admin/employees';
 import { manufacturers } from './stock/manufacturers';
 import { items } from './stock/items';
 import { itemInstances } from './stock/itemInstances';
+import { employeeEntries } from './security/employeeEntries';
 
 const rootReducer = combineReducers({
   units,
   employees,
   manufacturers,
   items,
-  itemInstances
+  itemInstances,
+  employeeEntries
 });
 
 export default rootReducer;
