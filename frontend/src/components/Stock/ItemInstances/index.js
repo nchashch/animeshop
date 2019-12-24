@@ -5,8 +5,8 @@ import ItemInstancesList from './ItemInstancesList';
 export default function ItemInstances() {
   return (
     <Fragment>
-      <ItemInstancesList/>
       <ItemInstanceForm/>
+      <ItemInstancesList/>
     </Fragment>
   );
 }

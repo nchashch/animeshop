@@ -6,7 +6,6 @@ import ItemInstances from "../Stock/ItemInstances";
 export function Stock() {
     return (
       <div>
-        <h2>Склады</h2>
         <Manufacturers/>
         <Items/>
         <ItemInstances/>

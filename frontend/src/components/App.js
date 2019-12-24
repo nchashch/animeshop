@@ -21,9 +21,6 @@ function App() {
       <div>
         <ul>
           <li>
-            <Link to="/">Design</Link>
-          </li>
-          <li>
             <Link to="/admin">Admin</Link>
           </li>
           <li>
@@ -34,9 +31,6 @@ function App() {
           </li>
           <li>
             <Link to="/security">Security</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
           </li>
         </ul>
 
@@ -51,7 +45,7 @@ function App() {
         */}
         <Switch>
           <Route exact path="/">
-            <Design />
+            <Admin />
           </Route>
           <Route path="/admin">
             <Admin /> 

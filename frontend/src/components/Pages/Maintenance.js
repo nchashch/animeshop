@@ -8,7 +8,6 @@ import EquipmentInspectionResults from "../Maintenance/EquipmentInspectionResult
 export function Maintenance() {
     return (
       <div>
-        <h2>Оборудовние</h2>
         <Equipment/>
         <EquipmentInstances/>
         <EquipmentInspectionSchedules/>

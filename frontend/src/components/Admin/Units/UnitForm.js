@@ -9,6 +9,7 @@ export default function UnitForm() {
   const onSubmit = values => dispatch(postUnit(values));
   return (
     <Fragment>
+      <h2>Add unit</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label>Name: </label>
         <input name="name" ref={register}></input><br/>

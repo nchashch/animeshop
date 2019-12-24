@@ -26,6 +26,7 @@ export default function EmployeeForm() {
   );
   return (
     <Fragment>
+      <h2>Add employee</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label>Name: </label>
         <input name="name" ref={register}></input><br/>

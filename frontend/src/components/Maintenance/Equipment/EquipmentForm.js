@@ -9,6 +9,7 @@ export default function EquipmentForm() {
   const onSubmit = values => dispatch(postEquipment(values));
   return (
     <Fragment>
+      <h2>Add equipment</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label>Name: </label>
         <input name="name" ref={register}></input><br/>
