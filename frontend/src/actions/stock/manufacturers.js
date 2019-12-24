@@ -19,7 +19,7 @@ function receiveManufacturers(manufacturers) {
 export function postManufacturer(manufacturer) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/stock/manufacturers',
+      url: '/api/stock/manufacturers',
       method: 'POST',
       data: manufacturer
     };
@@ -39,7 +39,7 @@ export function postManufacturer(manufacturer) {
 export function fetchManufacturers() {
   return (dispatch) => {
     return axios
-      .get('https://localhost/api/stock/manufacturers')
+      .get('/api/stock/manufacturers')
       .then(
         res => {
           const manufacturers = res.data;
@@ -55,7 +55,7 @@ export function fetchManufacturers() {
 export function deleteManufacturer(id) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/stock/manufacturers',
+      url: '/api/stock/manufacturers',
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'

@@ -19,7 +19,7 @@ function receiveTransportEntries(transportEntries) {
 export function postTransportEntry(transportEntries) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/security/transport_entries',
+      url: '/api/security/transport_entries',
       method: 'POST',
       data: transportEntries
     };
@@ -39,7 +39,7 @@ export function postTransportEntry(transportEntries) {
 export function fetchTransportEntries() {
   return (dispatch) => {
     return axios
-      .get('https://localhost/api/security/transport_entries')
+      .get('/api/security/transport_entries')
       .then(
         res => {
           const transportEntries = res.data;
@@ -55,7 +55,7 @@ export function fetchTransportEntries() {
 export function deleteTransportEntry(id) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/security/transport_entries',
+      url: '/api/security/transport_entries',
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'

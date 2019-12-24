@@ -19,7 +19,7 @@ function receiveItems(items) {
 export function postItem(item) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/stock/items',
+      url: '/api/stock/items',
       method: 'POST',
       data: item
     };
@@ -39,7 +39,7 @@ export function postItem(item) {
 export function fetchItems() {
   return (dispatch) => {
     return axios
-      .get('https://localhost/api/stock/items')
+      .get('/api/stock/items')
       .then(
         res => {
           const items = res.data;
@@ -55,7 +55,7 @@ export function fetchItems() {
 export function deleteItem(id) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/stock/items',
+      url: '/api/stock/items',
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'

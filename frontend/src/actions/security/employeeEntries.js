@@ -19,7 +19,7 @@ function receiveEmployeeEntries(employeeEntries) {
 export function postEmployeeEntry(employeeEntries) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/security/employee_entries',
+      url: '/api/security/employee_entries',
       method: 'POST',
       data: employeeEntries
     };
@@ -39,7 +39,7 @@ export function postEmployeeEntry(employeeEntries) {
 export function fetchEmployeeEntries() {
   return (dispatch) => {
     return axios
-      .get('https://localhost/api/security/employee_entries')
+      .get('/api/security/employee_entries')
       .then(
         res => {
           const employeeEntries = res.data;
@@ -55,7 +55,7 @@ export function fetchEmployeeEntries() {
 export function deleteEmployeeEntry(id) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/security/employee_entries',
+      url: '/api/security/employee_entries',
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'

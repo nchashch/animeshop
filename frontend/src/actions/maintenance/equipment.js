@@ -19,7 +19,7 @@ function receiveEquipment(equipment) {
 export function postEquipment(equipment) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/maintenance/equipment',
+      url: '/api/maintenance/equipment',
       method: 'POST',
       data: equipment
     };
@@ -39,7 +39,7 @@ export function postEquipment(equipment) {
 export function fetchEquipment() {
   return (dispatch) => {
     return axios
-      .get('https://localhost/api/maintenance/equipment')
+      .get('/api/maintenance/equipment')
       .then(
         res => {
           const equipment = res.data;
@@ -55,7 +55,7 @@ export function fetchEquipment() {
 export function deleteEquipment(id) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/maintenance/equipment',
+      url: '/api/maintenance/equipment',
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'

@@ -19,7 +19,7 @@ function receiveEmployees(employees) {
 export function postEmployee(employee) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/admin/employees',
+      url: '/api/admin/employees',
       method: 'POST',
       data: employee
     };
@@ -39,7 +39,7 @@ export function postEmployee(employee) {
 export function fetchEmployees() {
   return (dispatch) => {
     return axios
-      .get('https://localhost/api/admin/employees')
+      .get('/api/admin/employees')
       .then(
         res => {
           const employees = res.data;
@@ -55,7 +55,7 @@ export function fetchEmployees() {
 export function deleteEmployee(id) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/admin/employees',
+      url: '/api/admin/employees',
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'

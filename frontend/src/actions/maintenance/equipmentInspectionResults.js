@@ -19,7 +19,7 @@ function receiveEquipmentInspectionResults(equipmentInspectionResults) {
 export function postEquipmentInspectionResult(equipmentInspectionResult) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/maintenance/equipment_inspection_results',
+      url: '/api/maintenance/equipment_inspection_results',
       method: 'POST',
       data: equipmentInspectionResult
     };
@@ -39,7 +39,7 @@ export function postEquipmentInspectionResult(equipmentInspectionResult) {
 export function fetchEquipmentInspectionResults() {
   return (dispatch) => {
     return axios
-      .get('https://localhost/api/maintenance/equipment_inspection_results')
+      .get('/api/maintenance/equipment_inspection_results')
       .then(
         res => {
           const equipmentInspectionResults = res.data;
@@ -55,7 +55,7 @@ export function fetchEquipmentInspectionResults() {
 export function deleteEquipmentInspectionResult(id) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/maintenance/equipment_inspection_results',
+      url: '/api/maintenance/equipment_inspection_results',
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'

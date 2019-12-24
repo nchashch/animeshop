@@ -19,7 +19,7 @@ function receiveItemInstances(itemInstances) {
 export function postItemInstance(itemInstance) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/stock/item_instances',
+      url: '/api/stock/item_instances',
       method: 'POST',
       data: itemInstance
     };
@@ -39,7 +39,7 @@ export function postItemInstance(itemInstance) {
 export function fetchItemInstances() {
   return (dispatch) => {
     return axios
-      .get('https://localhost/api/stock/item_instances')
+      .get('/api/stock/item_instances')
       .then(
         res => {
           const itemInstances = res.data;
@@ -55,7 +55,7 @@ export function fetchItemInstances() {
 export function deleteItemInstance(id) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/stock/item_instances',
+      url: '/api/stock/item_instances',
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'

@@ -19,7 +19,7 @@ function receiveEquipmentInspectionSchedules(equipmentInspectionSchedules) {
 export function postEquipmentInspectionSchedule(equipmentInspectionSchedule) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/maintenance/equipment_inspection_schedules',
+      url: '/api/maintenance/equipment_inspection_schedules',
       method: 'POST',
       data: equipmentInspectionSchedule
     };
@@ -39,7 +39,7 @@ export function postEquipmentInspectionSchedule(equipmentInspectionSchedule) {
 export function fetchEquipmentInspectionSchedules() {
   return (dispatch) => {
     return axios
-      .get('https://localhost/api/maintenance/equipment_inspection_schedules')
+      .get('/api/maintenance/equipment_inspection_schedules')
       .then(
         res => {
           const equipmentInspectionSchedules = res.data;
@@ -55,7 +55,7 @@ export function fetchEquipmentInspectionSchedules() {
 export function deleteEquipmentInspectionSchedule(id) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/maintenance/equipment_inspection_schedules',
+      url: '/api/maintenance/equipment_inspection_schedules',
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'

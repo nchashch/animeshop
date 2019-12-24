@@ -19,7 +19,7 @@ function receiveUnits(units) {
 export function postUnit(unit) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/admin/units',
+      url: '/api/admin/units',
       method: 'POST',
       data: unit
     };
@@ -39,7 +39,7 @@ export function postUnit(unit) {
 export function fetchUnits() {
   return (dispatch) => {
     return axios
-      .get('https://localhost/api/admin/units')
+      .get('/api/admin/units')
       .then(
         res => {
           const units = res.data;
@@ -55,7 +55,7 @@ export function fetchUnits() {
 export function deleteUnit(id) {
   return (dispatch) => {
     const options =  {
-      url: 'https://localhost/api/admin/units',
+      url: '/api/admin/units',
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'
