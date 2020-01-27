@@ -18,22 +18,22 @@ export default function EquipmentInstancesList() {
       <td>{equipmentInstance.location}</td>
       <td>{equipmentInstance.installedAt}</td>
       <td>{equipmentInstance.operational ? '[x]' : '[  ]'}</td>
-      <td><button onClick={() => dispatch(deleteEquipmentInstance(equipmentInstance.id))}>Delete</button></td>
+      <td><button onClick={() => dispatch(deleteEquipmentInstance(equipmentInstance.id))}>Удалить</button></td>
     </tr>
   );
   return (
     <Fragment>
-      <h2>EquipmentInstances</h2>
+      <h2>Еденицы оборудования</h2>
       <table width="100%">
         <thead>
         <tr>
           <th>Id</th>
-          <th>Model</th>
-          <th>Comment</th>
-          <th>Unit</th>
-          <th>Location</th>
-          <th>InstalledAt</th>
-          <th>Operational</th>
+          <th>Вид оборудования</th>
+          <th>Комментарий</th>
+          <th>Подразделение</th>
+          <th>Расположение</th>
+          <th>Когда установленно</th>
+          <th>В рабочем состоянии</th>
         </tr>
         </thead>
         <tbody>

@@ -26,15 +26,15 @@ export default function ItemForm() {
   );
   return (
     <Fragment>
-      <h2>Add item</h2>
+      <h2>Добавить наименование товара</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>Name: </label>
+        <label>Название: </label>
         <input name="name" ref={register}></input><br/>
-        <label>Description: </label>
+        <label>Описание: </label>
         <input name="description" ref={register}></input><br/>
-        <label>Manufacturer: </label>
+        <label>Производитель: </label>
         {select}<br/>
-        <button>Add Item</button>
+        <button>Добавить</button>
       </form>
     </Fragment>
   );

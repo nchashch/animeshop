@@ -16,20 +16,20 @@ export default function EquipmentInspectionResultsList() {
       <td>{equipmentInspectionResult.inspectedBy}</td>
       <td>{equipmentInspectionResult.schedule}</td>
       <td>{equipmentInspectionResult.description}</td>
-      <td><button onClick={() => dispatch(deleteEquipmentInspectionResult(equipmentInspectionResult.id))}>Delete</button></td>
+      <td><button onClick={() => dispatch(deleteEquipmentInspectionResult(equipmentInspectionResult.id))}>Удалить</button></td>
     </tr>
   );
   return (
     <Fragment>
-      <h2>EquipmentInspectionResults</h2>
+      <h2>Отчеты об осмотре оборудования</h2>
       <table width="100%">
         <thead>
         <tr>
           <th>Id</th>
-          <th>InspectedAt</th>
-          <th>InspectedBy</th>
-          <th>Schedule</th>
-          <th>Description</th>
+          <th>Осмотрено когда</th>
+          <th>Осмотрено кем</th>
+          <th>Id записи в графике осмотров</th>
+          <th>Описание</th>
         </tr>
         </thead>
         <tbody>

@@ -9,13 +9,13 @@ export default function ManufacturerForm() {
   const onSubmit = values => dispatch(postManufacturer(values));
   return (
     <Fragment>
-      <h2>Add manufacturer</h2>
+      <h2>Добавить производителя</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>Name: </label>
+        <label>Название: </label>
         <input name="name" ref={register}></input><br/>
-        <label>Description: </label>
+        <label>Описание: </label>
         <input name="description" ref={register}></input><br/>
-        <button>Add manufacturer</button>
+        <button>Добавить</button>
       </form>
     </Fragment>
   );

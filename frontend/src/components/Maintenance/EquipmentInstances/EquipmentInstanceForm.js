@@ -39,21 +39,21 @@ export default function EquipmentInstanceForm() {
   );
   return (
     <Fragment>
-      <h2>Add equipment instance</h2>
+      <h2>Добавить еденицу оборудования</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>Comment: </label>
+        <label>Комментарий: </label>
         <input name="comment" ref={register}></input><br/>
-        <label>Location: </label>
+        <label>Расположение: </label>
         <input name="location" ref={register}></input><br/>
-        <label>Operational: </label>
+        <label>В рабочем состоянии: </label>
         <input name="operational" type="checkbox" ref={register}></input><br/>
-        <label>InstalledAt: </label>
+        <label>Когда установленно: </label>
         <input name="installedAt" type="datetime-local" ref={register}></input><br/>
-        <label>Model: </label>
+        <label>Вид оборудования: </label>
         {modelSelect}<br/>
-        <label>Unit: </label>
+        <label>Подразделение: </label>
         {unitSelect}<br/>
-        <button>Add EquipmentInstance</button>
+        <button>Добавить</button>
       </form>
     </Fragment>
   );

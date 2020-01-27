@@ -15,18 +15,18 @@ export default function ManufacturersList() {
       <td>{manufacturer.id}</td>
       <td>{manufacturer.name}</td>
       <td>{manufacturer.description}</td>
-      <td><button onClick={() => dispatch(deleteManufacturer(manufacturer.id))}>Delete</button></td>
+      <td><button onClick={() => dispatch(deleteManufacturer(manufacturer.id))}>Удалить</button></td>
     </tr>
   );
   return (
     <Fragment>
-      <h2>manufacturers</h2>
+      <h2>Производители</h2>
       <table width="100%">
         <thead>
         <tr>
           <th>Id</th>
-          <th>Name</th>
-          <th>Description</th>
+          <th>Название</th>
+          <th>Описание</th>
         </tr>
         </thead>
         <tbody>

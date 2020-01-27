@@ -14,18 +14,18 @@ export default function EquipmentList() {
       <td>{equipment.id}</td>
       <td>{equipment.name}</td>
       <td>{equipment.description}</td>
-      <td><button onClick={() => dispatch(deleteEquipment(equipment.id))}>Delete</button></td>
+      <td><button onClick={() => dispatch(deleteEquipment(equipment.id))}>Удалить</button></td>
     </tr>
   );
   return (
     <Fragment>
-      <h2>Equipment</h2>
+      <h2>Виды оборудования</h2>
       <table width="100%">
         <thead>
         <tr>
           <th>Id</th>
-          <th>Name</th>
-          <th>Description</th>
+          <th>Название</th>
+          <th>Описание</th>
         </tr>
         </thead>
         <tbody>

@@ -14,18 +14,18 @@ export default function UnitsList() {
       <td>{unit.id}</td>
       <td>{unit.name}</td>
       <td>{unit.address}</td>
-      <td><button onClick={() => dispatch(deleteUnit(unit.id))}>Delete</button></td>
+      <td><button onClick={() => dispatch(deleteUnit(unit.id))}>Удалить</button></td>
     </tr>
   );
   return (
     <Fragment>
-      <h2>Units</h2>
+      <h2>Подразделения</h2>
       <table width="100%">
         <thead>
         <tr>
           <th>Id</th>
-          <th>Name</th>
-          <th>Address</th>
+          <th>Имя</th>
+          <th>Адрес</th>
         </tr>
         </thead>
         <tbody>

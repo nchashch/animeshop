@@ -16,19 +16,19 @@ export default function ItemsList() {
       <td>{item.name}</td>
       <td>{item.description}</td>
       <td>{item.manufacturer}</td>
-      <td><button onClick={() => dispatch(deleteItem(item.id))}>Delete</button></td>
+      <td><button onClick={() => dispatch(deleteItem(item.id))}>Удалить</button></td>
     </tr>
   );
   return (
     <Fragment>
-      <h2>items</h2>
+      <h2>Список наименований товаров</h2>
       <table width="100%">
         <thead>
         <tr>
           <th>Id</th>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Manufacturer</th>
+          <th>Название</th>
+          <th>Описание</th>
+          <th>Производитель</th>
         </tr>
         </thead>
         <tbody>

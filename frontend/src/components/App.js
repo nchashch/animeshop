@@ -21,16 +21,16 @@ function App() {
       <div>
         <ul>
           <li>
-            <Link to="/admin">Admin</Link>
+            <Link to="/admin">Администрирование</Link>
           </li>
           <li>
-            <Link to="/maintenance">Maintenance</Link>
+            <Link to="/maintenance">Оборудование</Link>
           </li>
           <li>
-            <Link to="/stock">Stock</Link>
+            <Link to="/stock">Товары</Link>
           </li>
           <li>
-            <Link to="/security">Security</Link>
+            <Link to="/security">Безопасность</Link>
           </li>
         </ul>
 

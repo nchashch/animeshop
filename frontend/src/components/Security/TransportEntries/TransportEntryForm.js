@@ -28,17 +28,17 @@ export default function TransportEntryForm() {
   );
   return (
     <Fragment>
-      <h2>Add transport entry</h2>
+      <h2>Добавить запись в журнал въезда/выезда транспорта </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>EnteredAt: </label>
+        <label>Когда въехал: </label>
         <input name="enteredAt" type="datetime-local" ref={register}></input><br/>
-        <label>ExitedAt: </label>
+        <label>Когда выехал: </label>
         <input name="exitedAt" type="datetime-local" ref={register}></input><br/>
-        <label>Transport: </label>
+        <label>Номер машины: </label>
         <input name="licensePlate" ref={register}></input><br/>
-        <label>Unit: </label>
+        <label>Подразделение: </label>
         {unitSelect}<br/>
-        <button>Add TransportEntry</button>
+        <button>Добавить</button>
       </form>
     </Fragment>
   );

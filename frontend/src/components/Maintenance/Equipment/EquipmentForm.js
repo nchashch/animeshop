@@ -9,13 +9,13 @@ export default function EquipmentForm() {
   const onSubmit = values => dispatch(postEquipment(values));
   return (
     <Fragment>
-      <h2>Add equipment</h2>
+      <h2>Добавить вид оборудования</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>Name: </label>
+        <label>Название: </label>
         <input name="name" ref={register}></input><br/>
-        <label>Description: </label>
+        <label>Описание: </label>
         <input name="description" ref={register}></input><br/>
-        <button>Add equipment</button>
+        <button>Добавить</button>
       </form>
     </Fragment>
   );

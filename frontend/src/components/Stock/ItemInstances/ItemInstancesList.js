@@ -18,21 +18,21 @@ export default function ItemInstancesList() {
       <td>{itemInstance.amount}</td>
       <td>{itemInstance.price}</td>
       <td>{itemInstance.discount}</td>
-      <td><button onClick={() => dispatch(deleteItemInstance(itemInstance.id))}>Delete</button></td>
+      <td><button onClick={() => dispatch(deleteItemInstance(itemInstance.id))}>Удалить</button></td>
     </tr>
   );
   return (
     <Fragment>
-      <h2>item instances</h2>
+      <h2>Список товаров</h2>
       <table width="100%">
         <thead>
         <tr>
           <th>Id</th>
-          <th>Item</th>
-          <th>Unit</th>
-          <th>Amount</th>
-          <th>Price</th>
-          <th>Discount</th>
+          <th>Наименование товара</th>
+          <th>Подразделение</th>
+          <th>Количество</th>
+          <th>Цена</th>
+          <th>Скидка</th>
         </tr>
         </thead>
         <tbody>

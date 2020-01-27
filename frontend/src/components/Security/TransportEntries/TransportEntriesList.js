@@ -16,20 +16,20 @@ export default function TransportEntriesList() {
       <td>{transportEntry.licensePlate}</td>
       <td>{transportEntry.enteredAt}</td>
       <td>{transportEntry.exitedAt}</td>
-      <td><button onClick={() => dispatch(deleteTransportEntry(transportEntry.id))}>Delete</button></td>
+      <td><button onClick={() => dispatch(deleteTransportEntry(transportEntry.id))}>Удалить</button></td>
     </tr>
   );
   return (
     <Fragment>
-      <h2>TransportEntries</h2>
+      <h2>Журнал въезда/выезда транспорта</h2>
       <table width="100%">
         <thead>
         <tr>
           <th>Id</th>
-          <th>Unit</th>
-          <th>Transport</th>
-          <th>EnteredAt</th>
-          <th>ExitedAt</th>
+          <th>Подразделение</th>
+          <th>Номер машины</th>
+          <th>Когда въехал</th>
+          <th>Когда выехал</th>
         </tr>
         </thead>
         <tbody>

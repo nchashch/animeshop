@@ -9,13 +9,13 @@ export default function UnitForm() {
   const onSubmit = values => dispatch(postUnit(values));
   return (
     <Fragment>
-      <h2>Add unit</h2>
+      <h2>Добавить подразделение</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>Name: </label>
+        <label>Имя: </label>
         <input name="name" ref={register}></input><br/>
-        <label>Address: </label>
+        <label>Адрес: </label>
         <input name="address" ref={register}></input><br/>
-        <button>Add unit</button>
+        <button>Добавить</button>
       </form>
     </Fragment>
   );

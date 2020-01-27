@@ -40,15 +40,15 @@ export default function EquipmentInspectionScheduleForm() {
   );
   return (
     <Fragment>
-      <h2>Add equipment inspection schedule</h2>
+      <h2>Добавить запись в график осмотров</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>DateTime: </label>
+        <label>Время осмотра: </label>
         <input name="installedAt" type="datetime-local" ref={register}></input><br/>
-        <label>EquipmentInstance: </label>
+        <label>Еденица оборудования: </label>
         {equipmentInstanceSelect}<br/>
-        <label>Employee: </label>
+        <label>Сотрудник: </label>
         {employeeSelect}<br/>
-        <button>Add EquipmentInspectionSchedule</button>
+        <button>Добавить</button>
       </form>
     </Fragment>
   );

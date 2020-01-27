@@ -16,20 +16,20 @@ export default function EmployeeEntriesList() {
       <td>{employeeEntry.employee}</td>
       <td>{employeeEntry.enteredAt}</td>
       <td>{employeeEntry.exitedAt}</td>
-      <td><button onClick={() => dispatch(deleteEmployeeEntry(employeeEntry.id))}>Delete</button></td>
+      <td><button onClick={() => dispatch(deleteEmployeeEntry(employeeEntry.id))}>Удалить</button></td>
     </tr>
   );
   return (
     <Fragment>
-      <h2>EmployeeEntries</h2>
+      <h2>Журнал входа/выхода сотрудников</h2>
       <table width="100%">
         <thead>
         <tr>
           <th>Id</th>
-          <th>Unit</th>
-          <th>Employee</th>
-          <th>EnteredAt</th>
-          <th>ExitedAt</th>
+          <th>Подразделение</th>
+          <th>Сотрудник</th>
+          <th>Когда вошел</th>
+          <th>Когда вышел</th>
         </tr>
         </thead>
         <tbody>

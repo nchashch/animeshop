@@ -39,17 +39,17 @@ export default function EquipmentInspectionResultForm() {
   );
   return (
     <Fragment>
-      <h2>Add equipment inspection result</h2>
+      <h2>Добавить отчет об осмотре оборудования</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>InspectedAt: </label>
+        <label>Осмотренно когда: </label>
         <input name="inspectedAt" type="datetime-local" ref={register}></input><br/>
-        <label>Schedule: </label>
+        <label>Id записи в графике осмотров: </label>
         {equipmentInspectionScheduleSelect}<br/>
-        <label>InspectedBy: </label>
+        <label>Осмотрено кем: </label>
         {employeeSelect}<br/>
-        <label>Description: </label>
+        <label>Описание: </label>
         <input name="description" ref={register}></input><br/>
-        <button>Add EquipmentInspectionResult</button>
+        <button>Добавить</button>
       </form>
     </Fragment>
   );

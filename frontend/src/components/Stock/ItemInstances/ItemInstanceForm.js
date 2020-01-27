@@ -41,19 +41,19 @@ export default function ItemInstanceForm() {
   );
   return (
     <Fragment>
-      <h2>Add item instance</h2>
+      <h2>Добавить товар</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>Amount: </label>
+        <label>Количество: </label>
         <input name="amount" type="number" ref={register}></input><br/>
-        <label>Price: </label>
+        <label>Цена: </label>
         <input name="price" type="number" ref={register}></input><br/>
-        <label>Discount: </label>
+        <label>Скидка: </label>
         <input name="discount" type="number" ref={register}></input><br/>
-        <label>Item: </label>
+        <label>Наименование товара: </label>
         {itemSelect}<br/>
-        <label>Unit: </label>
+        <label>Подразделение: </label>
         {unitSelect}<br/>
-        <button>Add ItemInstance</button>
+        <button>Добавить</button>
       </form>
     </Fragment>
   );

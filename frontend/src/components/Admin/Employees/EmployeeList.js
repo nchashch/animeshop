@@ -14,18 +14,18 @@ export default function EmployeesList() {
       <td>{employee.id}</td>
       <td>{employee.name}</td>
       <td>{employee.unit}</td>
-      <td><button onClick={() => dispatch(deleteEmployee(employee.id))}>Delete</button></td>
+      <td><button onClick={() => dispatch(deleteEmployee(employee.id))}>Удалить</button></td>
     </tr>
   );
   return (
     <Fragment>
-      <h2>Employees</h2>
+      <h2>Сотрудники</h2>
       <table width="100%">
         <thead>
         <tr>
           <th>Id</th>
-          <th>Name</th>
-          <th>Unit</th>
+          <th>Имя</th>
+          <th>Подразделение</th>
         </tr>
         </thead>
         <tbody>

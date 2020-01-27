@@ -16,20 +16,20 @@ export default function EquipmentInspectionSchedulesList() {
       <td>{equipmentInspectionSchedule.equipmentInstance}</td>
       <td>{equipmentInspectionSchedule.dateTime}</td>
       <td>{equipmentInspectionSchedule.completed ? '[x]' : '[  ]'}</td>
-      <td><button onClick={() => dispatch(deleteEquipmentInspectionSchedule(equipmentInspectionSchedule.id))}>Delete</button></td>
+      <td><button onClick={() => dispatch(deleteEquipmentInspectionSchedule(equipmentInspectionSchedule.id))}>Удалить</button></td>
     </tr>
   );
   return (
     <Fragment>
-      <h2>EquipmentInspectionSchedules</h2>
+      <h2>График осмотра оборудования</h2>
       <table width="100%">
         <thead>
         <tr>
           <th>Id</th>
-          <th>Employee</th>
-          <th>EquipmentInstance</th>
-          <th>DateTime</th>
-          <th>Completed</th>
+          <th>Сотрудник</th>
+          <th>Еденица оборудования</th>
+          <th>Время осмотра</th>
+          <th>Завершен</th>
         </tr>
         </thead>
         <tbody>

@@ -40,17 +40,17 @@ export default function EmployeeEntryForm() {
   );
   return (
     <Fragment>
-      <h2>Add employee entry</h2>
+      <h2>Добавить запись в журнал входа/выхода сотрудников</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>EnteredAt: </label>
+        <label>Когда вошел: </label>
         <input name="enteredAt" type="datetime-local" ref={register}></input><br/>
-        <label>ExitedAt: </label>
+        <label>Когда вышел: </label>
         <input name="exitedAt" type="datetime-local" ref={register}></input><br/>
-        <label>Employee: </label>
+        <label>Сотрудник: </label>
         {employeeSelect}<br/>
-        <label>Unit: </label>
+        <label>Подразделение: </label>
         {unitSelect}<br/>
-        <button>Add EmployeeEntry</button>
+        <button>Добавить</button>
       </form>
     </Fragment>
   );
